@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this lab, you'll update  state using `setState()`. 
+In this lab, you'll update  state using `setState()`.
 
 ## World record click counter
 ![Oldtimer stuff](http://il5.picdn.net/shutterstock/videos/15633112/thumb/1.jpg)
@@ -35,6 +35,21 @@ You can only count so many jumps, hula-hoop rotations and hot dogs being devoure
   }
 }
 ```
+{
+  theme: 'blue',
+  addressInfo: {
+    street: null,
+    number: null,
+    city: null,
+    country: null
+  },
+}
+
+this.setState({
+  addressInfo: Object.assign({}, this.state.addressInfo, {
+    city: 'New York City',
+  }),
+});
 
 3. Create a button with the class `'bitrate'`. Clicking this button changes the `settings.bitrate` state property to `12`.
 4. Create a button with the class `'resolution'`. Clicking this button changes the `settings.video.resolution` state property to `'720p'`.
